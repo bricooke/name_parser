@@ -9,7 +9,9 @@ describe "NameParser" do
   
   it "should parse out prefixes" do
     test [
-      ["Mr. Brian Cooke", {:prefix => "Mr.", :first_name => "Brian", :last_name => "Cooke"}]
+      ["Mr. Brian Cooke",  {:prefix => "Mr.", :first_name => "Brian", :last_name => "Cooke"}],
+      ["Mrs. Brian Cooke", {:prefix => "Mrs.", :first_name => "Brian", :last_name => "Cooke"}],
+      ["Mrs Brian Cooke",  {:prefix => "Mrs", :first_name => "Brian", :last_name => "Cooke"}]
     ]
   end
   
