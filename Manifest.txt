@@ -3,4 +3,4 @@ Manifest.txt
 README.txt
 Rakefile
 lib/name_parser.rb
-test/test_name_parser.rb
+spec/name_parser_spec.rb

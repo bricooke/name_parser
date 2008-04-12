@@ -1,6 +1,6 @@
 = name_parser
 
-https://roobasoft.roundhaus.com/projects/383-gems/name_parser
+http://github.com/bricooke/name_parser
 
 == DESCRIPTION:
 
@@ -8,25 +8,17 @@ Provides a NameParser class that takes a single string and provides .first_name,
 
 == FEATURES/PROBLEMS:
 
-* FIX (list of features or problems)
-
 == SYNOPSIS:
-
-  FIX (code sample of usage)
 
 == REQUIREMENTS:
 
-* FIX (list of requirements)
-
 == INSTALL:
-
-* FIX (sudo gem install, anything else)
 
 == LICENSE:
 
 (The MIT License)
 
-Copyright (c) 2008 Makalumedia
+Copyright (c) 2008 Brian Cooke
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the
