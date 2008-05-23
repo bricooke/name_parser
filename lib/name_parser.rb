@@ -1,5 +1,5 @@
 class NameParser
-  VERSION = '0.1.1'
+  VERSION = '0.1.2'
   
   attr_reader :first_name, :last_name, :middle_name, :prefix, :suffix
   
