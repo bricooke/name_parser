@@ -1,3 +1,4 @@
+$KCODE="u"
 require 'lib/name_parser.rb'
 
 describe "NameParser" do
@@ -9,9 +10,7 @@ describe "NameParser" do
   
   it "should parse out prefixes" do
     test [
-      ["Mr. Brian Cooke",  {:prefix => "Mr.", :first_name => "Brian", :last_name => "Cooke"}],
-      ["Mrs. Brian Cooke", {:prefix => "Mrs.", :first_name => "Brian", :last_name => "Cooke"}],
-      ["Mrs Brian Cooke",  {:prefix => "Mrs", :first_name => "Brian", :last_name => "Cooke"}]
+      ["Mr. Brian Cooke", {:prefix => "Mr.", :first_name => "Brian", :last_name => "Cooke"}]
     ]
   end
   
@@ -50,6 +49,28 @@ describe "NameParser" do
     test = "Current Resident"
     n = NameParser.new(test)
     test.should == "Current Resident"
+  end
+  
+  it "should handle accents in names" do
+    test [
+      ["Mrs. Lis\323 Bernaird", {:first_name => "Lisë", :last_name => "Bernaird"}],
+      ["Lis\323 Sayer", {:first_name => "Lisë", :last_name => "Sayer"}]
+    ]
+  end
+  
+  it "should handle Mrs and Mr" do
+    test [
+      ["Mrs. Jane Doe", {:first_name => "Jane", :last_name => "Doe"}],
+      ["Mr. John Doe", {:first_name => "John", :last_name => "Doe"}],
+    ]
+  end
+  
+  it "should handle Ms" do
+    test [
+      ["Ms Jane Doe", {:first_name => "Jane", :last_name => "Doe"}],
+      ["Ms. Jane Doe", {:first_name => "Jane", :last_name => "Doe"}],
+      ["Miss Jane Doe", {:first_name => "Jane", :last_name => "Doe"}]
+    ]
   end
   
   def test(array)

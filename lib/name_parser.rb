@@ -1,9 +1,9 @@
 class NameParser
-  VERSION = '0.1.2'
+  VERSION = '0.1.1'
   
   attr_reader :first_name, :last_name, :middle_name, :prefix, :suffix
   
-  PREFIXES = [/^miss/i, /^mister/i, /^dr[\.]?/i, /^mr[\.]? and mrs[\.]?/i, /^mrs[\.]? and mr[\.]?/i, /^mrs[\.]?/i, /^mr[\.]?/i]
+  PREFIXES = [/^mrs[\.]?/i, /^mr[\.]?/i, /^ms[\.]?/i, /^miss/i, /^mister/i, /^dr[\.]?/i, /^mr[\.]? and mrs[\.]?/i, /^mrs[\.]? and mr[\.]?/i]
   SUFFIXES = [/,?\s*jr[\.]?$/i, /,?\s*sr[\.]?$/i, /,?\s*iii$/i, /,?\s*iv$/i, /,?\s*v$/i, /,?\s*phd$/i]
   LAST_NAME_PREFIXES = [/de la /i]
   
